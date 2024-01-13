@@ -1,0 +1,17 @@
+.userDetailsContainer {
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+@media screen and (min-width: 501px) {
+    .userDetailsContainer {
+        position: absolute;
+        top: 13px;
+        right: 13px;
+    }
+  }
+  

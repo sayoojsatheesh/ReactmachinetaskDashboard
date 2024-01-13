@@ -31,7 +31,7 @@ const SideBar = () => {
   return (
     <div
       className={`${classes.SideBarMainContainer} ${
-        openSideBar ? "" : classes.SmallScreen
+        openSideBar ? classes.SmallScreen: ""
       }`}
     >
       <div className={classes.ToggleButton}>

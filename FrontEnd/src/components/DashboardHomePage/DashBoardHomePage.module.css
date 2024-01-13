@@ -1,0 +1,13 @@
+.DashboardHomePageMainContainer {
+  display: flex;
+  background-color: #e8edff;
+}
+
+.LeftSide {
+  width: 20%;
+}
+
+.RightSide {
+  flex: 1;
+  padding: 2rem 2rem;
+}
