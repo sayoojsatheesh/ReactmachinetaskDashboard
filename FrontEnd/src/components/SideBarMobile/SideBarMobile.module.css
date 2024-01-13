@@ -1,0 +1,45 @@
+.SideBarMobileMainContainer {
+  height: 100%;
+  background-image: url("../../Assets/Rectangle\ 1.png");
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 150px;
+  position: relative;
+  padding-top: 2rem;
+}
+
+.open{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.SideBarMobileTopSection{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.SideBarMobileFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.1rem;
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SideBarMobileFooter:hover {
+  cursor: pointer;
+  background-color: rgb(253, 30, 30);
+  color: white;
+}

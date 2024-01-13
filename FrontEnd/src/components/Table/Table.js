@@ -9,7 +9,14 @@ const Table = () => {
   const { data, loading, error } = useAxios("http://localhost:3001/api/table");
 
   return (
-    <div style={{height:'100%',display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
+    <div
+      style={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
       <table>
         <thead>
           <tr>
@@ -21,7 +28,7 @@ const Table = () => {
         </thead>
         <tbody>
           {data?.map((item) => (
-            <tr>
+            <tr key={item.id}>
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.quantity}</td>
@@ -46,10 +53,9 @@ const Table = () => {
             "& .MuiPaginationItem-page.Mui-selected": {
               border: "1px solid black",
             },
-            "& .MuiPaginationItem-icon.Mui-disabled":
-              {
-                backgroundColor: "green", // Color for disabled arrows
-              },
+            "& .MuiPaginationItem-icon.Mui-disabled": {
+              backgroundColor: "green", // Color for disabled arrows
+            },
           }}
           count={10}
           variant="outlined"

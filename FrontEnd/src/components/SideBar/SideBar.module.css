@@ -65,6 +65,6 @@
 
 .BottomSection:hover{
   cursor: pointer;
-  background-color: rgb(255, 86, 86);
-  color: black;
+  background-color: rgb(253, 30, 30);
+  color:white;
 }
