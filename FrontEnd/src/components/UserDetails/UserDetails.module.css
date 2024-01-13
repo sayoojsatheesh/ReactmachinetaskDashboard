@@ -10,3 +10,36 @@
  
 }
 
+.UserDetailsMainContainer img:hover{
+  cursor: pointer;
+}
+
+.Username{
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.Designation{
+  text-align: center;
+  font-size: .9rem;
+  color: grey;
+  font-weight: 600;
+}
+
+
+@media only screen and (max-width: 899px) {
+  .UserDetailsMainContainer{
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+
+@media only screen and (max-width: 499px) {
+  .UserDetailsMainContainer{
+    width: 100%;
+
+  }
+}
+

@@ -1,11 +1,11 @@
 // CSS //
 import classes from "./SideBarButton.module.css";
 
-const SideBarButton = ({ buttonText, image, openSideBar }) => {
+const SideBarButton = ({ buttonText, image }) => {
   return (
     <button className={classes.buttonContainer}>
       <img src={image} alt="Icons" />
-      {openSideBar ? buttonText : ""}
+      {buttonText}
     </button>
   );
 };

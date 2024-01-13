@@ -15,8 +15,8 @@ const ImageContainer = ({ images }) => {
           src={item}
           alt={`Social Media Image ${index + 1}`}
           style={{
-            maxWidth: "30px", 
-            height: "30px", 
+            maxWidth: "25px", 
+            height: "25px", 
             
           }}
         />

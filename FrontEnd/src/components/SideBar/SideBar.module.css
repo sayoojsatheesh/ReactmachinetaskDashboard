@@ -62,3 +62,9 @@
 .BottomSection img{
   margin-left: .5rem;
 }
+
+.BottomSection:hover{
+  cursor: pointer;
+  background-color: rgb(255, 86, 86);
+  color: black;
+}

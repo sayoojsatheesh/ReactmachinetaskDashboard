@@ -7,6 +7,8 @@ import Instagram from "../../Assets/instagram.png";
 import X from "../../Assets/twitter.png";
 // Custom //
 import ImageContainer from "./ImageContainer/ImageContainer";
+// MUI //
+import { useMediaQuery } from '@mui/material';
 
 const UserDetails = ({ UserName }) => {
   return (
@@ -14,8 +16,8 @@ const UserDetails = ({ UserName }) => {
       <div style={{height:'50%'}}>
         <img  src={userPhoto} alt="UserPhoto" />
       </div>
-      <div>{UserName}</div>
-      <div>CEO</div>
+      <div className={classes.Username}>{UserName}</div>
+      <div className={classes.Designation}>CEO</div>
       <ImageContainer images={[Facebook, Instagram, X]} />
     </div>
   );

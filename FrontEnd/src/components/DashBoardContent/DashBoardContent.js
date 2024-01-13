@@ -34,7 +34,7 @@ const DashBoardContent = () => {
           <Grid item xs={12} md={9}>
             <Table />
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid  item xs={12} md={3} >
             <UserDetails UserName={"John Doe"} />
           </Grid>
         </Grid>

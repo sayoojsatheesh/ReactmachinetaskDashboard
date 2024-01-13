@@ -1,5 +1,5 @@
 // Custom //
-import SideBar from "../SideBar/SideBar";
+import SideBarDesktop from "../SideBar/SideBarDesktop";
 import DashBoardContent from "../DashBoardContent/DashBoardContent";
 // CSS //
 import classes from "./DashBoardHomePage.module.css";
@@ -8,7 +8,7 @@ const DashboardHomePage = () => {
   return (
     <div className={classes.DashboardHomePageMainContainer}>
       <div className={classes.LeftSide}>
-        <SideBar />
+        <SideBarDesktop />
       </div>
       <div className={classes.RightSide}>
         <DashBoardContent />
