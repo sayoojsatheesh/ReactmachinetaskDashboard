@@ -1,0 +1,56 @@
+.ToggleButton{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.SideBarMainContainer {
+  position: relative;
+  padding-top: 3rem;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../Assets/Rectangle\ 1.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.SmallScreen{
+  width: 20%;
+}
+
+.TopSection {
+  min-height: 124px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.TopSection img:nth-child(2) {
+  margin-top: 0.7rem;
+  width: 40%;
+}
+
+.MidSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.BottomSection {
+  font-size: 1.1rem;
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BottomSection img{
+  margin-left: .5rem;
+}

@@ -1,0 +1,23 @@
+.buttonContainer {
+  float: right;
+  right: 25px;
+  height: 60px;
+  background-color: rgba(26, 31, 48, 255);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 78%;
+  padding-left: 1rem;
+  border-radius: 10px 0 0 10px;
+}
+
+.buttonContainer img {
+  margin-right: 8px;
+  height: 24px;
+}
+
+
+
