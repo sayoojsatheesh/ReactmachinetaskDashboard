@@ -10,85 +10,9 @@ import LineChart from "../LineChart/LineChart";
 import PieChart from "../PieChart/PieChart";
 // MUI //
 import Grid from "@mui/material/Grid";
-// Libaries //
-import axios from "axios";
 
 const DashBoardContent = () => {
-  const [lineChartData, setLineChartData] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const chartData = {
-    series: [
-      {
-        name: "Value",
-        data: lineChartData,
-        color: "#a9cfe4",
-      },
-    ],
-    categories: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
-  };
-
-  const fetchData = async () => {
-    try {
-      // Make the GET request using Axios
-      const response = await axios.get("http://localhost:3001/api/graph");
-      setLineChartData(processData(response.data));
-    } catch (error) {
-      console.log("Error in fetchData =", error);
-    } finally {
-      // Set loading to false once the request is completed
-      // setLoading(false);
-    }
-  };
-
-  // Function helps to intialize values not provided to 0 //
-  const processData = (data) => {
-    const result = Array.from({ length: 12 }, (_, index) => 0);
-
-    data.forEach(({ x, y }) => {
-      const monthIndex = getMonthIndex(x);
-      if (monthIndex !== -1) {
-        result[monthIndex] = y;
-      }
-    });
-
-    return result;
-  };
-
-  // Helper function to get the index of a month in the array
-  const getMonthIndex = (monthName) => {
-    const monthNames = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    return monthNames.indexOf(monthName);
-  };
+ 
 
   return (
     <div>
@@ -102,7 +26,7 @@ const DashBoardContent = () => {
         <Grid container spacing={4}>
           <Grid item xs={12} lg={8}>
             <div className={classes.LineChartContainer}>
-              <LineChart chartData={chartData} />
+              <LineChart />
             </div>
           </Grid>
           <Grid item xs={12} lg={4}>

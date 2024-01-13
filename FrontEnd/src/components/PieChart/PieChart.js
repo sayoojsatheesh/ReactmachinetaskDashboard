@@ -1,20 +1,22 @@
-// React //
-import React, { useState,useEffect } from "react";
 // Libaries //
 import Chart from "react-apexcharts";
 // Custom //
 import PieChartCategories from "./PieChartCategories/PieChartCategories";
+import useAxios from "../../hooks/useAxios";
 
 const PieChart = () => {
+  const { data, loading, error } = useAxios(
+    "http://localhost:3001/api/pie-chart"
+  );
+
+  // Extracting Labels //
+  const labels = data?.map((item) => item.label) || [];
+  // Extracting Values //
+  const pieChartData = data?.map((item) => item.value) || [];
+
   let chartData = {
     options: {
-      labels: [
-        "Category A",
-        "Category B",
-        "Category C",
-        "Category D",
-        "Category E",
-      ],
+      labels: labels,
       dataLabels: {
         enabled: false,
       },
@@ -25,7 +27,7 @@ const PieChart = () => {
       colors: ["#67c587", "#88d1a1", "#a9deba", "#c9ead4", "#eaf6ed"],
     },
 
-    series: [30, 20, 15, 25, 10], // Example data, replace with your own values
+    series: pieChartData,
   };
   return (
     <div>

@@ -1,7 +1,39 @@
 // Libaries //
 import ReactApexChart from "react-apexcharts";
+// Custom //
+import useAxios from "../../hooks/useAxios";
 
-const LineChart = ({ chartData }) => {
+const LineChart = () => {
+  const { data, loading, error } = useAxios("http://localhost:3001/api/graph");
+
+  // Process Data
+  let lineChartData = processData(data ? data : []);
+
+  // Chart Data and Options
+  const chartData = {
+    series: [
+      {
+        name: "Value",
+        data: lineChartData,
+        color: "#a9cfe4",
+      },
+    ],
+    categories: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+  };
+
   const chartOptions = {
     chart: {
       height: 350,
@@ -68,6 +100,40 @@ const LineChart = ({ chartData }) => {
       },
     },
   };
+
+  // Function helps to intialize values not provided to 0 //
+  function processData(data) {
+    const result = Array.from({ length: 12 }, (_, index) => 0);
+
+    data.forEach(({ x, y }) => {
+      const monthIndex = getMonthIndex(x);
+      if (monthIndex !== -1) {
+        result[monthIndex] = y;
+      }
+    });
+
+    return result;
+  }
+
+  // Helper function to get the index of a month in the array
+  function getMonthIndex(monthName) {
+    const monthNames = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return monthNames.indexOf(monthName);
+  }
+
   return (
     <ReactApexChart
       options={chartOptions}

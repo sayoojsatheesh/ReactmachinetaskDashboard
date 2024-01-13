@@ -4,6 +4,7 @@ const PieChartCategories = ({ lables }) => {
     <div>
       {lables?.map((item, index) => (
         <div
+          key={index}
           style={{
             display: "flex",
             alignItems: "center",
