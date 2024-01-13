@@ -7,6 +7,7 @@ import classes from "./DashBoardContent.module.css";
 // Custom //
 import UserDetailsButton from "../UserDetailsButton/UserDetailsButton";
 import LineChart from "../LineChart/LineChart";
+import PieChart from "../PieChart/PieChart";
 // MUI //
 import Grid from "@mui/material/Grid";
 // Libaries //
@@ -14,7 +15,7 @@ import axios from "axios";
 
 const DashBoardContent = () => {
   const [lineChartData, setLineChartData] = useState([]);
-  
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -99,13 +100,15 @@ const DashBoardContent = () => {
 
       <div style={{ width: "100%" }}>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} lg={8}>
             <div className={classes.LineChartContainer}>
               <LineChart chartData={chartData} />
             </div>
           </Grid>
-          <Grid item xs={12} md={4}>
-            <div style={{ backgroundColor: "red" }}>2</div>
+          <Grid item xs={12} lg={4}>
+            <div className={classes.PieChartContainer}>
+              <PieChart />
+            </div>
           </Grid>
           <Grid item xs={12} md={8}>
             3
