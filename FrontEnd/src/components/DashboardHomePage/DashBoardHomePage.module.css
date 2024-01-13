@@ -1,6 +1,7 @@
 .DashboardHomePageMainContainer {
   display: flex;
   background-color: #e8edff;
+  height: 100%;
 }
 
 .LeftSide {
