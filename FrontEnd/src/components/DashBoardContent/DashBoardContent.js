@@ -1,5 +1,3 @@
-// React //
-import { useEffect, useState } from "react";
 // Images //
 import sun from "../../Assets/sun.png";
 // CSS //
@@ -9,6 +7,7 @@ import UserDetailsButton from "../UserDetailsButton/UserDetailsButton";
 import LineChart from "../LineChart/LineChart";
 import PieChart from "../PieChart/PieChart";
 import Table from "../Table/Table";
+import UserDetails from "../UserDetails/UserDetails";
 // MUI //
 import Grid from "@mui/material/Grid";
 
@@ -33,12 +32,10 @@ const DashBoardContent = () => {
             </div>
           </Grid>
           <Grid item xs={12} md={9}>
-       
             <Table />
- 
           </Grid>
           <Grid item xs={12} md={3}>
-            4
+            <UserDetails UserName={"John Doe"} />
           </Grid>
         </Grid>
       </div>

@@ -7,9 +7,9 @@ import Pagination from "@mui/material/Pagination";
 
 const Table = () => {
   const { data, loading, error } = useAxios("http://localhost:3001/api/table");
-  console.log("data tab", data);
+
   return (
-    <div>
+    <div style={{height:'100%',display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
       <table>
         <thead>
           <tr>
@@ -36,7 +36,6 @@ const Table = () => {
           alignItems: "center",
           justifyContent: "center",
           paddingTop: ".8rem",
-          paddingBottom: ".8rem",
         }}
       >
         <Pagination
