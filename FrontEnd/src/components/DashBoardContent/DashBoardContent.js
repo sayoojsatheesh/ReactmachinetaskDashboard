@@ -10,16 +10,17 @@ import Table from "../Table/Table";
 import UserDetails from "../UserDetails/UserDetails";
 // MUI //
 import Grid from "@mui/material/Grid";
+import { Fragment } from "react";
 
 const DashBoardContent = () => {
   return (
-    <div>
+    <Fragment>
       <UserDetailsButton />
       <div className={classes.heading}>
         <h3>Good Morning !</h3>
         <img src={sun} alt="sun" />
       </div>
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "100%",marginTop:'1rem' }}>
         <Grid container spacing={4}>
           <Grid item xs={12} lg={8}>
             <div className={classes.LineChartContainer}>
@@ -39,7 +40,7 @@ const DashBoardContent = () => {
           </Grid>
         </Grid>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

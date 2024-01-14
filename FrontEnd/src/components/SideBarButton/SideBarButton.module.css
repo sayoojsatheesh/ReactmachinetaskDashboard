@@ -1,7 +1,7 @@
 .buttonContainer {
   float: right;
   right: 25px;
-  height: 60px;
+  height: 45px;
   background-color: rgba(26, 31, 48, 255);
   border: none;
   color: white;
@@ -14,7 +14,7 @@
   border-radius: 10px 0 0 10px;
 }
 
-.buttonContainer:hover{
+.buttonContainer:hover {
   background-color: white;
   color: black;
 }
@@ -24,5 +24,13 @@
   height: 24px;
 }
 
+.buttonContainer:focus {
+  background-color: rgba(26, 31, 48, 255);
+  color: white;
+}
 
-
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .buttonContainer {
+    width: 50%;
+  }
+}

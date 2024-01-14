@@ -1,8 +1,6 @@
 .SideBarMobileMainContainer {
   height: 100%;
   background-image: url("../../Assets/Rectangle\ 1.png");
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   display: flex;
   flex-direction: column;
   row-gap: 150px;
@@ -10,19 +8,27 @@
   padding-top: 2rem;
 }
 
-.open{
+.open {
   position: fixed;
   height: 100vh;
   width: 100vw;
   z-index: 1000;
 }
 
-.SideBarMobileTopSection{
- display: flex;
- flex-direction: column;
- align-items: center;
+.SideBarMobileTopSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
+.SideBarMobileMidSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
 .SideBarMobileMidSection > :first-child {
   background-color: white;
   color: black;

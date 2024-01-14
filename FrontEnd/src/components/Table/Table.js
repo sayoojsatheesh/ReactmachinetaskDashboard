@@ -71,8 +71,15 @@ const Table = () => {
                 },
                 "& .MuiPaginationItem-page.Mui-selected": {
                   border: "1px solid black",
+                  backgroundColor: "white",
+                },
+                "& .MuiPaginationItem-page.Mui-disabled": {
+                  color: "green", // Adjust color for disabled arrows
                 },
               }}
+              defaultPage={1}
+              boundaryCount={1}
+              siblingCount={0}
               count={10}
               variant="outlined"
               shape="rounded"
