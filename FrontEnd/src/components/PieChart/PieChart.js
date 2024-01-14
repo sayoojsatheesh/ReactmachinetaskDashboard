@@ -3,6 +3,9 @@ import Chart from "react-apexcharts";
 // Custom //
 import PieChartCategories from "./PieChartCategories/PieChartCategories";
 import useAxios from "../../hooks/useAxios";
+import ErrorPage from "../ErrorPage/ErrorPage";
+// MUI //
+import Skeleton from "@mui/material/Skeleton";
 
 const PieChart = () => {
   const { data, loading, error } = useAxios(
@@ -29,24 +32,34 @@ const PieChart = () => {
 
     series: pieChartData,
   };
+
+  if (loading) {
+    return <Skeleton variant="rectangular" width={"100%"} height={350} />;
+  }
   return (
     <div>
-      <Chart
-        options={chartData.options}
-        series={chartData.series}
-        type="pie"
-        width="100%"
-        height="250"
-      />
-      <PieChartCategories
-        lables={[
-          "Category A",
-          "Category B",
-          "Category C",
-          "Category D",
-          "Category E",
-        ]}
-      />
+      {error ? (
+        <ErrorPage />
+      ) : (
+        <div>
+          <Chart
+            options={chartData.options}
+            series={chartData.series}
+            type="pie"
+            width="100%"
+            height="250"
+          />
+          <PieChartCategories
+            lables={[
+              "Category A",
+              "Category B",
+              "Category C",
+              "Category D",
+              "Category E",
+            ]}
+          />
+        </div>
+      )}
     </div>
   );
 };

@@ -18,12 +18,12 @@ const PieChartCategories = ({ lables }) => {
             style={{
               borderRadius: "50%",
               backgroundColor: `${colors[index]}`,
-              width: "18px",
-              height: "18px",
+              width: "16px",
+              height: "16px",
               display: "inline-block", 
             }}
           ></span>
-          <span style={{ fontWeight: "bold", fontSize: ".8rem" }}>{item}</span>
+          <span style={{ fontWeight: "bold", fontSize: ".7rem" }}>{item}</span>
         </div>
       ))}
     </div>

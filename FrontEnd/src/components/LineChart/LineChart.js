@@ -2,6 +2,10 @@
 import ReactApexChart from "react-apexcharts";
 // Custom //
 import useAxios from "../../hooks/useAxios";
+import { Fragment } from "react";
+import ErrorPage from "../ErrorPage/ErrorPage";
+// MUI //
+import Skeleton from "@mui/material/Skeleton";
 
 const LineChart = () => {
   const { data, loading, error } = useAxios("http://localhost:3001/api/graph");
@@ -131,13 +135,22 @@ const LineChart = () => {
     return monthNames.indexOf(monthName);
   }
 
+  if (loading) {
+    return <Skeleton variant="rectangular" width={"100%"} height={350} />;
+  }
   return (
-    <ReactApexChart
-      options={chartOptions}
-      series={chartData.series}
-      type="line"
-      height={350}
-    />
+    <Fragment>
+      {error ? (
+        <ErrorPage />
+      ) : (
+        <ReactApexChart
+          options={chartOptions}
+          series={chartData.series}
+          type="line"
+          height={350}
+        />
+      )}
+    </Fragment>
   );
 };
 
