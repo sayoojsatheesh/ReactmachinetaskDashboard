@@ -1,5 +1,3 @@
-// React //
-import { Fragment, useState } from "react";
 // CSS //
 import classes from "./SideBar.module.css";
 // Custom //

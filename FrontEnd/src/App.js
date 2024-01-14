@@ -1,11 +1,7 @@
 // Custom //
 import DashboardHomePage from "./components/DashboardHomePage/DashBoardHomePage";
 function App() {
-  return (
-    <div>
-      <DashboardHomePage />
-    </div>
-  );
+  return <DashboardHomePage />;
 }
 
 export default App;

@@ -11,7 +11,7 @@ const UserDetailsButton = () => {
         <div style={{ color: "rgba(169,169,169,255)" }}>john@Doe.com</div>
       </div>
       <div>
-        <img src={userImage} alt="UserImage" />
+        <img src={userImage} alt="User" />
       </div>
     </div>
   );

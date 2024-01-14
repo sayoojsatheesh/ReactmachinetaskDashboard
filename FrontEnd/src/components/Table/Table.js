@@ -53,9 +53,6 @@ const Table = () => {
             "& .MuiPaginationItem-page.Mui-selected": {
               border: "1px solid black",
             },
-            "& .MuiPaginationItem-icon.Mui-disabled": {
-              backgroundColor: "green", // Color for disabled arrows
-            },
           }}
           count={10}
           variant="outlined"

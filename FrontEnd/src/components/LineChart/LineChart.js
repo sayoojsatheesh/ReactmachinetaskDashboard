@@ -51,7 +51,7 @@ const LineChart = () => {
       strokeColors: "#a6cee3",
     },
     stroke: {
-      curve: "smooth", // or "stepline" or ["smooth", "stepline"] for multiple series
+      curve: "smooth",
       width: 2,
     },
     xaxis: {
@@ -65,9 +65,6 @@ const LineChart = () => {
       max: 20,
       tickAmount: 4, // This sets the number of ticks on the y-axis
       labels: {
-        // formatter: (value) => {
-        //   return value.toFixed(0); // You can format the label as needed
-        // },
         style: { colors: "#c8c8c8" },
       },
     },

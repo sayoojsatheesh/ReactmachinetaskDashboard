@@ -1,5 +1,6 @@
 const PieChartCategories = ({ lables }) => {
   let colors = ["#67c587", "#88d1a1", "#a9deba", "#c9ead4", "#eaf6ed"];
+
   return (
     <div>
       {lables?.map((item, index) => (
@@ -19,7 +20,7 @@ const PieChartCategories = ({ lables }) => {
               backgroundColor: `${colors[index]}`,
               width: "18px",
               height: "18px",
-              display: "inline-block", // to ensure inline rendering
+              display: "inline-block", 
             }}
           ></span>
           <span style={{ fontWeight: "bold", fontSize: ".8rem" }}>{item}</span>

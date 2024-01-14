@@ -7,14 +7,12 @@ import Instagram from "../../Assets/instagram.png";
 import X from "../../Assets/twitter.png";
 // Custom //
 import ImageContainer from "./ImageContainer/ImageContainer";
-// MUI //
-import { useMediaQuery } from '@mui/material';
 
 const UserDetails = ({ UserName }) => {
   return (
     <div className={classes.UserDetailsMainContainer}>
-      <div style={{height:'50%'}}>
-        <img  src={userPhoto} alt="UserPhoto" />
+      <div style={{ height: "50%" }}>
+        <img src={userPhoto} alt="User" />
       </div>
       <div className={classes.Username}>{UserName}</div>
       <div className={classes.Designation}>CEO</div>

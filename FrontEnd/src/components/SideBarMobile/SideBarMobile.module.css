@@ -23,6 +23,11 @@
  align-items: center;
 }
 
+.SideBarMobileMidSection > :first-child {
+  background-color: white;
+  color: black;
+}
+
 .SideBarMobileFooter {
   position: absolute;
   bottom: 0;

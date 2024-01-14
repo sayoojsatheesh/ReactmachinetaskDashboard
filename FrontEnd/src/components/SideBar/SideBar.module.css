@@ -1,4 +1,4 @@
-.ToggleButton{
+.ToggleButton {
   position: absolute;
   top: 0;
   right: 0;
@@ -15,16 +15,13 @@
   justify-content: space-between;
 }
 
-
-
-.SmallScreen{
- position: absolute;
- left: 0;
- right: 0;
- top: 0;
- bottom: 0;
- z-index: 1000;
- 
+.SmallScreen {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
 }
 
 .TopSection {
@@ -34,7 +31,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 
 .TopSection img:nth-child(2) {
   margin-top: 0.7rem;
@@ -48,6 +44,11 @@
   gap: 15px;
 }
 
+.MidSection > :first-child {
+  background-color: white;
+  color: black;
+}
+
 .BottomSection {
   font-size: 1.1rem;
   background-color: white;
@@ -59,12 +60,12 @@
   justify-content: center;
 }
 
-.BottomSection img{
-  margin-left: .5rem;
+.BottomSection img {
+  margin-left: 0.5rem;
 }
 
-.BottomSection:hover{
+.BottomSection:hover {
   cursor: pointer;
   background-color: rgb(253, 30, 30);
-  color:white;
+  color: white;
 }
