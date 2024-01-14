@@ -4,10 +4,8 @@ How to run the application :
 
 # Navigate to the Server directory
 cd Server
-
 # Install dependencies
 npm install
-
 # Start the backend server
 node server.js
 
@@ -15,9 +13,7 @@ node server.js
 
 # Navigate to the FrontEnd directory
 cd FrontEnd
-
 # Install dependencies
 npm install
-
 # Start the application
 npm start

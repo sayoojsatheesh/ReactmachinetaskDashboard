@@ -27,14 +27,7 @@ const Table = () => {
       {error ? (
         <ErrorPage />
       ) : (
-        <div
-          style={{
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className={classes.TableConatiner}>
           <table>
             <thead>
               <tr>
@@ -55,19 +48,13 @@ const Table = () => {
               ))}
             </tbody>
           </table>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              paddingTop: ".8rem",
-            }}
-          >
+          <div className={classes.PaginationContainer}>
             <Pagination
               size="small"
               sx={{
                 "& .MuiPaginationItem-root": {
                   backgroundColor: "white",
+                  margin: "2.5px",
                 },
                 "& .MuiPaginationItem-page.Mui-selected": {
                   border: "1px solid black",
